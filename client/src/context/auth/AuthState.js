@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
-import AuthContext from './authContext';
-import authReducer from './authReducer';
+import AuthContact from './AuthContact';
+import authReducer from './AuthReducer';
 import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
@@ -33,7 +33,7 @@ const AuthState = props => {
   // CLEAR ERRORS
 
   return (
-    <AuthContext.Provider
+    <AuthContact.Provider
       value={{
         token: state.token,
         isAuthenticated: state.isAuthenticated,
@@ -43,7 +43,7 @@ const AuthState = props => {
       }}
     >
       {props.children}
-    </AuthContext.Provider>
+    </AuthContact.Provider>
   );
 };
 
